@@ -1,19 +1,346 @@
-<!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/quokka-mascot.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nicoas（ニコアス） | 「コーチング×受験指導」で強みを引き出し、合格の先へ</title>
-    <meta name="description" content="nicoas（ニコアス）は、「コーチング×受験指導」の新しいアプローチで、あなたの受験勉強を「自分の可能性を広げる幸せな時間」へと変えていきます。無料体験レッスン・個別面談受付中。" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>nicoas - 受験を、もっと幸せな時間に。</title>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts for Japanese -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-styles">
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #333;
+    }
+    .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+    .bg-soft-blue {
+      background-color: #f0f9ff;
+    }
+    .text-primary {
+      color: #1d74e8;
+    }
+    .bg-primary {
+      background-color: #1d74e8;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- BEGIN: Header -->
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 py-4 shadow-sm">
+<div class="container mx-auto px-6 flex justify-between items-center">
+<div class="flex items-center">
+<img alt="nicoas logo" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5pDVPuRZD7sno1nb3t4G58EHMO3T-ijTi9e4SQx-JppuHkB0wu5rYYeG5l4-hbUWXqNwzeb5zkmPJ9O_z0AJmlmUmJ5_zHuQdkvLmaPfzfY3JTd9CQP1cBpP5qPpmEq32zm9CP7YgT_anXdj3J0ic3pFH5rKz_0Sfs8d0cGI_kuyCoE61m31kfEYxoADgWEl7udvvIGXr1jC4nRdI8xrbocqAC58yjlQgoHytIEb3vgSVXfeoWUBKs0EUVEE_NnGmkz4DiuhPR3nn"/>
+</div>
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="hover:text-primary" href="#service">Service</a>
+<a class="hover:text-primary" href="#story">Story</a>
+<a class="hover:text-primary" href="#pricing">Pricing</a>
+<a class="hover:text-primary" href="#commitment">Commitment</a>
+<a class="hover:text-primary" href="#voice">Voice</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="text-sm font-bold text-primary border border-primary px-4 py-2 rounded" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ooG6_6YwwjzUh1JD9dx69ufGVWFyy4xD4Fh1LHqoH4zvqw/viewform?usp=dialog">ログイン</a>
+<a class="text-sm font-bold bg-primary text-white px-6 py-2 rounded-md hover:opacity-90 transition" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ooG6_6YwwjzUh1JD9dx69ufGVWFyy4xD4Fh1LHqoH4zvqw/viewform?usp=dialog">無料で体験する</a>
+</div>
+</div>
+</header>
+<!-- END: Header -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="hero">
+<!-- Hero Illustration Background -->
+<div class="absolute top-0 right-0 w-full h-full -z-10 bg-gradient-to-l from-orange-50/50 to-white">
+<img alt="Girl Illustration" class="absolute right-0 top-0 h-full w-auto object-cover object-right opacity-80 md:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXDra1oaOFzYejw3aLwlmEDOeUFh55fhLkGs9C9P62un_iToFJ5hPw-OT95qNQHUGlYmtC3VJ_JgEl8SGOpvPHqNttqzMhj5vmZ3SLIV_IPk1rE4MhWlaYgk7T6oKJpxBA0CcDcAzH0MzG_S9z6Zz0CFZtxygbcYRANh64WUp4DnLrLMYDCMtk2jJuVCyWfLDdZUqU0V0swISo4mYSOZi682qfVJg4-DQGCnzVJL233-aIakPPes_e_8QhwgOlhVqf80lV-u1p8Sxh"/>
+</div>
+<div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<!-- Vertical Text Title -->
+<div class="flex mb-12">
+<h1 class="vertical-text text-4xl md:text-5xl lg:text-6xl font-bold leading-relaxed tracking-widest text-gray-800">
+            「ないもの」を数えるのは<br/>もうやめよう。
+          </h1>
+</div>
+<p class="text-gray-600 mb-8 leading-relaxed max-w-md">
+          自分には何もない、そんな風に思っていませんか？<br/>
+          あなたの個性、価値、そして未来への可能性を<br/>
+          私たちは一緒に見つけ出し、磨き上げていきます。
+        </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-white text-center px-8 py-4 rounded-md font-bold text-lg shadow-lg hover:bg-blue-600 transition" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ooG6_6YwwjzUh1JD9dx69ufGVWFyy4xD4Fh1LHqoH4zvqw/viewform?usp=dialog">今すぐ無料で体験する</a>
+<a class="border border-primary text-primary text-center px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition" href="#story">私たちの想いを知る</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: StorySection -->
+<section class="py-24 bg-white text-center" id="story">
+<div class="container mx-auto px-6 max-w-4xl">
+<span class="text-primary font-bold tracking-widest block mb-4">STORY</span>
+<h2 class="text-3xl md:text-4xl font-bold mb-12 leading-tight">ある一人の少女が、<br/>人生を変えた日の話を。</h2>
+<div class="space-y-6 text-gray-600 leading-loose text-lg">
+<p>「自分には何もない、そんな風にずっと思っていました。」</p>
+<p>学校の成績も普通、これといって誇れる特技もない。<br/>周りの友達が将来の夢を語る中、一人だけ取り残されたような感覚。</p>
+<p>でも、ある出会いがすべてを変えました。</p>
+<p>自分の小さな好きが、誰かの役に立つ喜びを知った時。<br/>苦手だと思っていたことが、見方を変えれば強みになると気づいた時。</p>
+<p>受験は、単なる「合格」を目指すためのものではありません。<br/>あなたが自分自身と向き合い、未来を切り拓く力を手にするための旅なのです。</p>
+<p>私たちは、そんな「一歩」を全力でサポートします。</p>
+</div>
+</div>
+</section>
+<!-- END: StorySection -->
+<!-- BEGIN: ServiceSection -->
+<section class="py-24 bg-white overflow-hidden" id="service">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between">
+<div class="md:w-1/2 mb-12 md:mb-0">
+<span class="text-primary font-bold tracking-widest block mb-4">ABOUT</span>
+<h2 class="text-4xl font-bold mb-8 text-gray-800">受験を、もっと幸せな時間に。</h2>
+<div class="space-y-6 text-gray-600 leading-relaxed">
+<p>私たちは、ただ点数を上げるだけの指導はしません。<br/>「なぜ学ぶのか」「自分はどう生きたいのか」という問いを大切にします。</p>
+<p>生徒一人ひとりの個性に寄り添った、<br/>コーチングと学習支援を組み合わせた独自のアプローチ。</p>
+<p>それが「nicoas（ニコアス）」の提供する新しい受験体験です。</p>
+</div>
+</div>
+<div class="md:w-1/2 flex justify-center items-center">
+<div class="relative">
+<img alt="nicoas mascot quokka" class="w-80 h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR1wVpopL6lNlU9NOgu4aJPq6J68cZ3kRwruftxt52yPOVRn1rIgnVyPaF4FF5C7C_x3SPh9CPmeXTQ1zj5QNFbda3Cy-Q_0frvMPo6RB13I2SkhZvQobGWBHhvilCPlqTRV_rgpONJ8FFC8L-A8m16taQFJbRskQzFUpdLyejV3pB92LS4xxw5ZQqFUbysssffyN6kMHj1Fh7yK2AireOwQwwt_-dRR7liqIkq1Dw_KErenM5uM7l4qoIwWj8NM38tXBOWfHNFLXW"/>
+<div class="absolute -bottom-10 left-1/2 -translate-x-1/2">
+<span class="text-primary text-6xl font-bold italic tracking-tighter">nicoas</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ServiceSection -->
+<!-- BEGIN: PricingSection -->
+<section class="py-24 bg-gray-50" id="pricing">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<span class="text-primary font-bold tracking-widest block mb-4">PLAN</span>
+<h2 class="text-4xl font-bold">料金プラン</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Basic Plan -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col h-full">
+<div class="text-center mb-6">
+<span class="bg-gray-100 text-gray-600 px-4 py-1 rounded-full text-sm font-bold">週1回コース</span>
+<h3 class="text-xl font-bold mt-4">基本サポートプラン</h3>
+<div class="mt-4 text-3xl font-bold">8,800円<span class="text-sm font-normal text-gray-400">（税込）</span></div>
+</div>
+<p class="text-sm text-gray-500 mb-8 flex-grow">
+            定期的な面談を通じて学習の進捗を管理。<br/>
+            自分一人では挫折しがちな学習習慣の定着を強力にサポートします。
+          </p>
+<ul class="space-y-3 text-sm text-gray-600 mb-8">
+<li class="flex items-start"><span class="text-primary mr-2">●</span> 週1回のパーソナル面談</li>
+<li class="flex items-start"><span class="text-primary mr-2">●</span> チャットでの質問対応（無制限）</li>
+<li class="flex items-start"><span class="text-primary mr-2">●</span> 学習計画の作成・調整</li>
+</ul>
+<a class="w-full py-3 border border-primary text-primary font-bold rounded-md hover:bg-blue-50 text-center transition" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ooG6_6YwwjzUh1JD9dx69ufGVWFyy4xD4Fh1LHqoH4zvqw/viewform?usp=dialog">詳しく見る</a>
+</div>
+<!-- Recommended Plan -->
+<div class="bg-white p-8 rounded-xl shadow-xl border-2 border-primary flex flex-col h-full transform md:-translate-y-4">
+<div class="text-center mb-6">
+<span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">最も選ばれています</span>
+<h3 class="text-xl font-bold mt-4">徹底伴走・合格コース</h3>
+<div class="mt-4">
+<div class="text-3xl font-bold">30,800円<span class="text-sm font-normal text-gray-400">（税込）</span></div>
+<div class="text-sm text-gray-400">または</div>
+<div class="text-3xl font-bold">61,600円<span class="text-sm font-normal text-gray-400">（税込）</span></div>
+</div>
+</div>
+<p class="text-sm text-gray-500 mb-8 flex-grow">
+            志望校合格に向けて、毎日の学習を徹底的にマネジメント。<br/>
+            コーチが二人三脚で最後まで伴走します。
+          </p>
+<ul class="space-y-3 text-sm text-gray-600 mb-8">
+<li class="flex items-start"><span class="text-primary mr-2">●</span> 毎日の学習管理・フィードバック</li>
+<li class="flex items-start"><span class="text-primary mr-2">●</span> 志望校特化型戦略の立案</li>
+<li class="flex items-start"><span class="text-primary mr-2">●</span> 月2回のオンライン授業付き</li>
+</ul>
+<a class="w-full py-3 bg-primary text-white font-bold rounded-md hover:bg-blue-600 text-center transition" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ooG6_6YwwjzUh1JD9dx69ufGVWFyy4xD4Fh1LHqoH4zvqw/viewform?usp=dialog">今すぐ申し込む</a>
+</div>
+<!-- Future Plan -->
+<div class="bg-gray-100 p-8 rounded-xl border border-dashed border-gray-300 flex flex-col h-full">
+<div class="text-center mb-6">
+<span class="bg-gray-200 text-gray-500 px-4 py-1 rounded-full text-sm font-bold">COMING SOON</span>
+<h3 class="text-xl font-bold mt-4">個別・特化プラン</h3>
+<div class="mt-4 text-3xl font-bold text-gray-400">Coming Soon...</div>
+</div>
+<p class="text-sm text-gray-400 mb-8 flex-grow">
+            特定の科目や、AO・推薦入試に特化したプランを準備中です。<br/>
+            詳細は公式LINEまたはお問い合わせにて随時告知いたします。
+          </p>
+<ul class="space-y-3 text-sm text-gray-400 mb-8">
+<li class="flex items-start"><span class="mr-2">●</span> AO・推薦入試対策特化</li>
+<li class="flex items-start"><span class="mr-2">●</span> 英語検定合格対策</li>
+<li class="flex items-start"><span class="mr-2">●</span> 小論文・面接マンツーマン指導</li>
+</ul>
+<a class="w-full py-3 border border-gray-300 text-gray-400 font-bold rounded-md cursor-not-allowed text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ooG6_6YwwjzUh1JD9dx69ufGVWFyy4xD4Fh1LHqoH4zvqw/viewform?usp=dialog">準備中</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PricingSection -->
+<!-- BEGIN: PhilosophySection -->
+<section class="py-24 bg-soft-blue" id="commitment">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start mb-16">
+<div class="md:w-1/2">
+<span class="text-primary font-bold tracking-widest block mb-4">COMMITMENT</span>
+<h2 class="text-4xl font-bold text-gray-800 leading-tight">伴走の成長に寄り添い、次元へ導く。</h2>
+</div>
+<div class="md:w-1/2 mt-4 md:mt-0">
+<p class="text-gray-600 leading-relaxed">私たちは常に、あなたの可能性を信じ続けます。単なる講師ではなく、人生を共に歩むパートナーとして、最高の環境を提供することを約束します。</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg">
+<h3 class="text-xl font-bold mb-4 border-l-4 border-primary pl-4">可能性を信じ抜くこと</h3>
+<p class="text-gray-600 text-sm leading-relaxed">どんなに自信がなくても、私たちはあなたの強みを見つけ出します。自分自身を信じられるようになるまで、私たちは全力であなたを信じ続けます。</p>
+</div>
+<div class="bg-white p-8 rounded-lg">
+<h3 class="text-xl font-bold mb-4 border-l-4 border-primary pl-4">自ら考え、行動する力</h3>
+<p class="text-gray-600 text-sm leading-relaxed">正解を教えるだけでなく、正解にたどり着くための「問い」の立て方を教えます。一生モノの自学自習力を育みます。</p>
+</div>
+<div class="bg-white p-8 rounded-lg">
+<h3 class="text-xl font-bold mb-4 border-l-4 border-primary pl-4">豊かな心で、未来へ</h3>
+<p class="text-gray-600 text-sm leading-relaxed">勉強だけの毎日ではなく、自分の「好き」や「ワクワク」も大切に。心の充足こそが、最高のパフォーマンスを引き出します。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PhilosophySection -->
+
+<!-- BEGIN: VoiceSection -->
+<section class="py-24 bg-white" id="voice">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="text-center mb-16">
+      <span class="text-primary font-bold tracking-widest block mb-4">VOICE</span>
+      <h2 class="text-4xl font-bold text-gray-800">利用者の声</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 flex flex-col h-full hover:shadow-md transition duration-300">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg mr-4">
+            A
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">高校2年生 / Aさん</h4>
+            <span class="text-xs text-gray-400">志望校合格・成績アップ</span>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-grow">
+          「自分には無理」と思っていた志望校でしたが、コーチと対話する中で「どうすればできるか」を考えられるようになり、成績も伸びて自信がつきました。
+        </p>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 flex flex-col h-full hover:shadow-md transition duration-300">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg mr-4">
+            B
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">高校3年生 / Bさん</h4>
+            <span class="text-xs text-gray-400">学習習慣の定着</span>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-grow">
+          勉強の計画を立てるのが苦手でしたが、オーダーメイドの計画を作成してもらい、日々の進捗も管理してくれるので、迷いなく勉強に集中できました。
+        </p>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 flex flex-col h-full hover:shadow-md transition duration-300">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg mr-4">
+            C
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">既卒生 / Cさん</h4>
+            <span class="text-xs text-gray-400">浪人生活のサポート</span>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-grow">
+          モチベーションの維持が難しかった浪人生活でしたが、週1回のコーチングセッションが良いリフレッシュになり、最後まで走りきることができました。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: VoiceSection -->
+
+<!-- BEGIN: FAQSection -->
+<section class="py-24 bg-white" id="faq">
+<div class="container mx-auto px-6 max-w-3xl">
+<div class="bg-primary text-white p-4 rounded-t-lg font-bold text-center">
+        よくある質問
+      </div>
+<div class="border border-t-0 border-gray-200 p-8 rounded-b-lg space-y-8">
+<div>
+<h4 class="font-bold mb-2 flex items-start">
+<span class="text-primary mr-2">Q.</span> 勉強が苦手ですが大丈夫ですか？
+          </h4>
+<p class="text-gray-600 text-sm pl-6">はい、もちろんです。苦手意識の根本原因を探り、今のあなたに最適な学習ペースを一緒に提案します。基礎の基礎から丁寧に伴走しますのでご安心ください。</p>
+</div>
+<div>
+<h4 class="font-bold mb-2 flex items-start">
+<span class="text-primary mr-2">Q.</span> オンラインでの受講ですか？
+          </h4>
+<p class="text-gray-600 text-sm pl-6">はい、基本的にZoomを用いたオンライン面談・指導となります。全国どこからでも受講可能です。通塾の手間がなく、時間を有効活用できます。</p>
+</div>
+<div>
+<h4 class="font-bold mb-2 flex items-start">
+<span class="text-primary mr-2">Q.</span> 途中からのプラン変更は可能ですか？
+          </h4>
+<p class="text-gray-600 text-sm pl-6">はい、月単位での変更が可能です。学習の進捗や、受験期の忙しさに合わせて柔軟にプランを見直すことができます。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FAQSection -->
+<!-- BEGIN: CTABlock -->
+<section class="py-24 bg-soft-blue">
+<div class="container mx-auto px-6">
+<div class="bg-white rounded-2xl p-12 shadow-sm text-center">
+<span class="text-gray-500 font-bold block mb-4">まずは無料体験でお話ししましょう</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 tracking-widest">無料体験入会はこちら</h2>
+<div class="flex flex-col md:flex-row justify-center items-center gap-6">
+<a class="bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-600 transition shadow-md" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ooG6_6YwwjzUh1JD9dx69ufGVWFyy4xD4Fh1LHqoH4zvqw/viewform?usp=dialog">
+            今すぐ無料で体験する
+          </a>
+<div class="flex gap-4">
+<a class="text-primary border border-primary px-6 py-4 rounded-full font-bold hover:bg-blue-50 transition" href="mailto:totoayano925@gmail.com">お問い合わせ</a>
+<a class="text-primary border border-primary px-6 py-4 rounded-full font-bold hover:bg-blue-50 transition" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ooG6_6YwwjzUh1JD9dx69ufGVWFyy4xD4Fh1LHqoH4zvqw/viewform?usp=dialog">公式LINE</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CTABlock -->
+<!-- BEGIN: Footer -->
+<footer class="py-12 bg-gray-50 border-t border-gray-200">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-8 md:mb-0">
+<img alt="nicoas footer logo" class="h-8 mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFW0KwqxPIOcFqFH5KbSDVn8vFq-zAKqArLghgFUG2imb_aE6mZVSspzXi_Nee5gDLC8qYQWusFjhfhLG0CGJObZKYAycdzhcl8hdaQebTdhN6dkL5WEDKWFqFo10WxPVJVS9R4pjqGb4qFn2QTrugkxEydn5D7gF1xboaURLEYaKipNPIwx_AotyDBs0VZPPw9QYuRk3kTEy34CnT3EajHcFkJFykIdK4UP5lMwPEzNK4X_72mlyTo3f4MLdRd0rQGXj0e1T3lzUB"/>
+<p class="text-xs text-gray-400">© 2026 nicoas. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-gray-500">
+<a class="hover:text-primary" href="#">利用規約</a>
+<a class="hover:text-primary" href="#">プライバシーポリシー</a>
+<a class="hover:text-primary" href="#">特定商取引法に基づく表記</a>
+<a class="hover:text-primary" href="#">運営会社</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>
