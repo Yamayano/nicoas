@@ -17,6 +17,7 @@ export default defineConfig({
         essay: resolve(__dirname, 'articles/essay.html'),
         balancing: resolve(__dirname, 'articles/balancing.html'),
         mental_health: resolve(__dirname, 'articles/mental-health.html'),
+        sfc_ao_guide: resolve(__dirname, 'articles/sfc-ao-guide.html'),
       }
     }
   }
