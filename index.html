@@ -57,6 +57,45 @@
       line-height: 2;
     }
   </style>
+  <style data-purpose="animations">
+    /* 1. Page load fade-in */
+    body {
+      opacity: 0;
+      animation: fadeInPage 1s ease-out forwards;
+    }
+    @keyframes fadeInPage {
+      to { opacity: 1; }
+    }
+
+    /* 2. Scroll reveal fade-in & slide-up */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 3. Button hover float */
+    .hover-float {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+    }
+    .hover-float:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Respect reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      body { animation: none !important; opacity: 1 !important; }
+      .reveal-on-scroll { transition: none !important; opacity: 1 !important; transform: none !important; }
+      .hover-float { transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease !important; }
+      .hover-float:hover { transform: none !important; box-shadow: none !important; }
+    }
+  </style>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></head>
 <body class="bg-white text-brand-textGray font-sans">
 <!-- BEGIN: Header -->
@@ -85,7 +124,7 @@
 <!-- END: Header -->
 <main class="pt-20">
 <!-- BEGIN: HeroSection -->
-<section class="relative bg-white min-h-0 md:min-h-[800px] py-16 md:py-0 flex items-center overflow-hidden">
+<section id="hero" class="relative bg-white min-h-0 md:min-h-[800px] py-16 md:py-0 flex items-center overflow-hidden">
 <div class="max-w-7xl mx-auto px-4 w-full grid md:grid-cols-2 gap-8 items-center relative z-10">
 <div class="z-10 md:ml-12">
 <div class="flex flex-row items-end gap-6 md:gap-10">
@@ -495,8 +534,37 @@
 </footer>
 <!-- END: Footer -->
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Scroll reveal logic (Intersection Observer)
+    const revealElements = document.querySelectorAll('section:not(#hero)');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target); // Measure once, animate, then stop observing
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1
+    });
 
+    revealElements.forEach(el => {
+      el.classList.add('reveal-on-scroll');
+      observer.observe(el);
+    });
 
+    // Add float on hover to CTA buttons
+    const buttons = document.querySelectorAll('a[href*="docs.google.com"], a[href*="drive.google.com"], button');
+    buttons.forEach(btn => {
+      if (btn.classList.contains('px-4') || btn.classList.contains('px-6') || btn.classList.contains('px-8')) {
+        btn.classList.add('hover-float');
+      }
+    });
+  });
+</script>
 
 
 
